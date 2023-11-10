@@ -14,7 +14,7 @@ object ApiClient {
             .addInterceptor(mHttpLoggingInterceptor)
             .build()
         val builder = Retrofit.Builder()
-            .baseUrl("https://dummy.restapiexample.com/api/v1/")
+            .baseUrl("http://demo.lazday.com/rest-api-sample/data.php")
             .addConverterFactory(GsonConverterFactory.create())
             .client(mOkHttpClient)
             .build()
