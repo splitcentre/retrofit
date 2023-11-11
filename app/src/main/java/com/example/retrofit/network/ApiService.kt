@@ -5,6 +5,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface ApiService {
-    @GET("hero")
-    fun getAllUsers(): Call<Hero>
+    @GET("data.php")
+    fun getAllChars(): Call<Hero>
 }
