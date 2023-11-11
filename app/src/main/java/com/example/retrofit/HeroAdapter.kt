@@ -9,13 +9,13 @@ import com.example.retrofit.databinding.ItemMarvelBinding
 import com.example.retrofit.model.Data
 import com.example.retrofit.model.Hero
 
-class HeroAdapter (private val listHero: List<Hero>, ):
+class HeroAdapter(private val listHero: List<Data>, ):
     RecyclerView.Adapter<HeroAdapter.ItemSuperheroViewHolder>(){
     inner class ItemSuperheroViewHolder (private val binding: ItemMarvelBinding):RecyclerView.ViewHolder(binding.root) {
         val itemImage: ImageView = itemView.findViewById(R.id.img_hero)
-        fun bind(data: Hero) {
+        fun bind(data: Data) {
             with(binding) {
-                title.text = Hero.heroName
+                title.text = data.heroName
             }
         }
     }

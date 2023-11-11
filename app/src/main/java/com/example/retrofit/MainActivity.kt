@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         response.enqueue(object : Callback<Hero> {
             override fun onResponse(call: Call<Hero>, response: Response<Hero>) {
                 for (i in response.body()!!.result) {
-                    userList.add(i.title)
+                    userList.add(i.heroName)
                 }
                 val listAdapter = ArrayAdapter(
                     this@MainActivity,
